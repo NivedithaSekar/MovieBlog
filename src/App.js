@@ -34,7 +34,7 @@ function App() {
           <Route path="/Edit/:id" element={<AddMovie movieList={movieList} setMovieList={setMovieList}/>}></Route>
           <Route path="/Movies/:id" element={<MovieDetails movieList={movieList}/>}></Route>
           <Route path="/404" element={<PageNotFound/>}></Route>
-          <Route path="*" element={<Navigate replace to="/404"/>}></Route>
+          <Route path="https://nv-blog.netlify.app/*" element={<Navigate replace to="/404"/>}></Route>
        </Routes>
   </div>
 }
