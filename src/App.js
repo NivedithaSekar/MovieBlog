@@ -42,6 +42,8 @@ function App() {
 function Home(){
   return <div>
     <h1>Welcome to my Favourite Movie list! </h1>
+    <p>Here I have listed my favorite movies..And the site is still in progress!</p>
+    <p>For now, We can perform CRUD Operations(Create, Read, Update & Delete) here</p>
     <p>Hope you'll like it😀</p>
   </div>
 }
