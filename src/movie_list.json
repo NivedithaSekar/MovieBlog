@@ -1,0 +1,78 @@
+{
+    "movies": [
+
+      {
+      "name": "Charlie",
+      "poster":
+      "https://m.media-amazon.com/images/M/MV5BMmZhMzVlNzEtMjQ3ZS00ZGJlLTk4N2YtMDIyNDNmZThhMGVmXkEyXkFqcGdeQXVyMzIyNDI4NjU@._V1_.jpg",
+      "rating": 8.1,
+      "summary": "A young, nonconforming woman named Tessa gets entangled in a cat-and-mouse chase in the by-lanes of Kerala, hunting for a mysterious artist who previously lived in her apartment.",
+      "trailer": "https://www.youtube.com/embed/oYxtLNJJ54Y"
+      },
+      {
+      
+      "name": "Tamasha",
+      "poster": "https://stat2.bollywoodhungama.in/wp-content/uploads/2016/03/433025791-306x393.jpg",
+      "rating": 7.1,
+      "summary": "Tamasha is about the journey of someone who has lost his edge in trying to follow acceptable conventions of society. The film is based on the central theme of abrasion and loss of self that happens in an attempt to find oneself.",
+      "trailer": "https://www.youtube.com/embed/o-e5eWVCzx8"
+      },
+      {
+      
+      "name": "Home Alone",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UY720_.jpg",
+      "rating": 7.7,
+      "summary": "An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation.",
+      "trailer": "https://www.youtube.com/embed/jEDaVHmw7r4"
+      },
+      {
+      
+      "name": "Ghilli",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOWYxZDlmMzUtN2JjMy00YzM0LWI4ODMtYmU0NGUzZDA0N2UwXkEyXkFqcGdeQXVyNjQ1MDcxNzM@._V1_.jpg",
+      "summary": "Velu, an aspiring kabaddi player, goes to Madurai to participate in a regional match, where he rescues Dhanalakshmi from Muthupandi, a powerful man keen on marrying the girl against her will.",
+      "rating": 8.4,
+      "trailer": "https://www.youtube.com/embed/4hGft6ZCApg"
+      },
+      {
+      
+      "name": "Jai Bhim",
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2Y5ZWMwZDgtZDQxYy00Mjk0LThhY2YtMmU1MTRmMjVhMjRiXkEyXkFqcGdeQXVyMTI1NDEyNTM5._V1_FMjpg_UX1000_.jpg",
+      "summary": "A tribal woman and a righteous lawyer battle in court to unravel the mystery around the disappearance of her husband, who was picked up the police on a false case",
+      "rating": 8.8,
+      "trailer": "https://www.youtube.com/embed/nnXpbTFrqXA"
+      },
+      {
+      
+      "name": "Ohm Shanthi Oshaana",
+      "rating": 7.7,
+      "summary": "A spirited young girl would stop at nothing to get the first love of her life, even if it takes seven years and several heartbreaks.",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/ae/Ohm_Shanthi_Oshaana_%282014%29_-_Poster.jpg",
+      "trailer": "https://www.youtube.com/embed/GaznvwVEED4"
+      },
+      {
+      
+      "name": "Encanto",
+      "poster": "https://lumiere-a.akamaihd.net/v1/images/p_encanto_homeent_22359_4892ae1c.jpeg",
+      "rating": 7.3,
+      "summary": "A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.",
+      "trailer": "https://www.youtube.com/embed/CaimKeDcudo"
+      },
+      {
+      
+      "name": "#Home",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWU1ZmNlYTctYmY1My00ZDlmLTk3M2EtZDcxY2E1ZGU0N2YzXkEyXkFqcGdeQXVyMTI1NDAzMzM0._V1_FMjpg_UX1200_.jpg",
+      "rating": 9.1,
+      "summary": "Oliver Twist (Indrans) wants to be tech-savvy and become a better companion to his two sons who spend more time on their phones than with their loved ones.",
+      "trailer": "https://www.youtube.com/embed/0xrCuNa_zZU"
+      },
+      {
+      
+      "name": "Ratatouille",
+      "poster": "https://resizing.flixster.com/gL_JpWcD7sNHNYSwI1ff069Yyug=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzLzc4ZmJhZjZiLTEzNWMtNDIwOC1hYzU1LTgwZjE3ZjQzNTdiNy5qcGc=",
+      "rating": 8,
+      "summary": "Remy, a rat, aspires to become a renowned French chef. However, he fails to realise that people despise rodents and will never enjoy a meal cooked by him.",
+      "trailer": "https://www.youtube.com/embed/NgsQ8mVkN8w"
+      }
+      ]
+  }
+  

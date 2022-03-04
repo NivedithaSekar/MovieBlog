@@ -1,0 +1,6 @@
+.add-movie-form{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
