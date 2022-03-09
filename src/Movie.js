@@ -8,6 +8,12 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import InfoIcon from '@mui/icons-material/Info';
 import EditIcon from '@mui/icons-material/Edit';
 import { Navigate, useNavigate } from "react-router-dom";
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 export function Movie({movie,id,movieList,deletedMovies,setDeletedMovies}){
     const navigate = useNavigate();
@@ -19,23 +25,27 @@ export function Movie({movie,id,movieList,deletedMovies,setDeletedMovies}){
         //conditional styling
     };*/
     return(
-        <div className="movie-container">
-          <img src={movie.poster} alt={movie.name} className="movie-poster" />
-          <div className="movie-specs">
-            <h2 className="movie-name">
-                {movie.name}
-                <IconButton aria-label="Summary" onClick={() => setShow(!show)} className="bt-sz-lg" color="primary">
+      <Card sx={{ maxWidth: 345 }} className="movie-container">
+      <CardMedia
+        component="img"
+        alt={movie.name}
+        image={movie.poster}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        {movie.name}
+        <IconButton aria-label="Summary" onClick={() => setShow(!show)} className="bt-sz-lg" color="primary">
                   {show? <ExpandLessIcon/>: <ExpandMoreIcon/>}
-                </IconButton>
-                <InfoIcon onClick={() => navigate(`/movies/${id}`)}/>
-            </h2>
-            <p className="movie-rating"> ⭐{movie.rating}</p>
-          </div>
-          {/*<button onClick={() => setShow(!show)}>Summary 🔽</button>*}
-          {/**Conditional Rendering */}
-          {show? <p className="movie-summary">{movie.summary}</p>:""}
-          <div className="movie-user-interactive-container">
-            <div className="likes-dislikes-container">
+        </IconButton>
+        <InfoIcon onClick={() => navigate(`/movies/${id}`)}/>
+        <p className="movie-rating"> ⭐{movie.rating}</p>
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        {show? <p className="movie-summary">{movie.summary}</p>:""}
+        </Typography>
+      </CardContent>
+      <CardActions className="movie-user-interactive-container">
+      <div className="likes-dislikes-container">
               <Like/><Dislike/>
             </div>
             <div>
@@ -50,11 +60,15 @@ export function Movie({movie,id,movieList,deletedMovies,setDeletedMovies}){
                 <EditIcon />
               </IconButton>
             </div>
-          </div>
-        </div>
+      </CardActions>
+    </Card>
+        
     );
 }
 
 function deleteMovie(movieList,id,deletedMovies,setDeletedMovies) {
   setDeletedMovies([...deletedMovies,movieList.splice(id,1)]);
  }
+
+
+ 
