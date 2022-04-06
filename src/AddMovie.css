@@ -1,4 +1,4 @@
-.add-movie-form{
+.add-movie-form,.edit-movie-form{
     padding: 1rem;
     display: flex;
     flex-direction: column;

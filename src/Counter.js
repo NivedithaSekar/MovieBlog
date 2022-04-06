@@ -1,8 +1,10 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
 
+
 function Like(){
+    useEffect(() => {console.log("Like is updating:"+like)})
     const [like,setLike]= useState(0);
     return(
         <Badge badgeContent={like} color="primary">

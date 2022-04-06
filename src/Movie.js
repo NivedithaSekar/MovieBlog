@@ -7,15 +7,16 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import InfoIcon from '@mui/icons-material/Info';
 import EditIcon from '@mui/icons-material/Edit';
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { API_URL } from "./global";
 
-export function Movie({movie,id,movieList,deletedMovies,setDeletedMovies}){
+//export function Movie({movie,id,movieList,setMovieList,deletedMovies,setDeletedMovies,getMovieList}){
+export function Movie({movie,id,deletedMovies,setDeletedMovies,getMovieList}){
     const navigate = useNavigate();
     const [show, setShow] = useState(true);
     /*const blockStyle = {
@@ -32,13 +33,14 @@ export function Movie({movie,id,movieList,deletedMovies,setDeletedMovies}){
         image={movie.poster}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-        {movie.name}
+        <Typography gutterBottom variant="h5" component="div"className="movie-specs">
+        <div>{movie.name}
         <IconButton aria-label="Summary" onClick={() => setShow(!show)} className="bt-sz-lg" color="primary">
                   {show? <ExpandLessIcon/>: <ExpandMoreIcon/>}
         </IconButton>
         <InfoIcon onClick={() => navigate(`/movies/${id}`)}/>
-        <p className="movie-rating"> ⭐{movie.rating}</p>
+        </div>
+        <div className="movie-rating"> ⭐{movie.rating}</div>
         </Typography>
         <Typography variant="body2" color="text.secondary">
         {show? <p className="movie-summary">{movie.summary}</p>:""}
@@ -50,7 +52,12 @@ export function Movie({movie,id,movieList,deletedMovies,setDeletedMovies}){
             </div>
             <div>
               <IconButton aria-label="delete movie" color="error" onClick={() => {
-                deleteMovie(movieList,id,deletedMovies,setDeletedMovies);
+                fetch(`${API_URL}/${id}`,{method:"DELETE"})
+                .then(response => response.json()).then((del_movie) => {
+                  //deleteMovie(del_movie,deletedMovies,setDeletedMovies);
+                  getMovieList();
+                });
+                //deleteMovie(movieList,id,deletedMovies,setDeletedMovies);
               }}>
                 <DeleteIcon />
               </IconButton>
@@ -66,8 +73,8 @@ export function Movie({movie,id,movieList,deletedMovies,setDeletedMovies}){
     );
 }
 
-function deleteMovie(movieList,id,deletedMovies,setDeletedMovies) {
-  setDeletedMovies([...deletedMovies,movieList.splice(id,1)]);
+function deleteMovie(movie,deletedMovies,setDeletedMovies) {
+  setDeletedMovies([...deletedMovies,movie]);
  }
 
 
