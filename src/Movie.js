@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 import { API_URL } from "./global";
 
 //export function Movie({movie,id,movieList,setMovieList,deletedMovies,setDeletedMovies,getMovieList}){
-export function Movie({movie,id,deletedMovies,setDeletedMovies,getMovieList}){
+export function Movie({movie,id,getMovieList}){
     const navigate = useNavigate();
     const [show, setShow] = useState(true);
     /*const blockStyle = {
@@ -62,7 +62,7 @@ export function Movie({movie,id,deletedMovies,setDeletedMovies,getMovieList}){
                 <DeleteIcon />
               </IconButton>
               <IconButton aria-label="edit movie" color="primary" onClick={() => {
-                navigate(`/Edit/${id}`);
+                navigate(`/Movies/Edit/${id}`);
               }}>
                 <EditIcon />
               </IconButton>
@@ -73,9 +73,9 @@ export function Movie({movie,id,deletedMovies,setDeletedMovies,getMovieList}){
     );
 }
 
-function deleteMovie(movie,deletedMovies,setDeletedMovies) {
-  setDeletedMovies([...deletedMovies,movie]);
- }
+// function deleteMovie(movie,deletedMovies,setDeletedMovies) {
+//   setDeletedMovies([...deletedMovies,movie]);
+//  }
 
 
  

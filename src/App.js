@@ -17,11 +17,9 @@ import { Paper } from '@mui/material';
 
 
 function App() {
-  //lifing up the state of the movie list as it is used by both App page and AddMovie page
-  //const INITIAL_MOVIE_LIST =  require('./movie_list.json').movies;
-  //const [movieList,setMovieList] = useState(INITIAL_MOVIE_LIST);
-  
+  //Defining navigate with useNavigate to navigate across the pages
   const navigate = useNavigate();
+  //Initially setting the state of the mode using useState & Theme using createTheme from Material Design MUI
   const [mode, setMode] = useState("light");
   const theme = createTheme({
     palette: {
@@ -53,7 +51,7 @@ function App() {
           <Route path="/" element={<Home/>}></Route>
           <Route path="/Movies" element={<MovieList  />}></Route>
           <Route path="/AddMovie" element={<AddMovie />}></Route>
-          <Route path="/Edit/:id" element={<EditMovie />}></Route>
+          <Route path="/Movies/Edit/:id" element={<EditMovie />}></Route>
           <Route path="/Movies/:id" element={<MovieDetails />}></Route>
           <Route path="/404" element={<PageNotFound/>}></Route>
           <Route path="*" element={<Navigate replace to="/404"/>}></Route>
